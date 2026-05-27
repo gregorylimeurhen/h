@@ -11,7 +11,6 @@ settings=$(stty -g)
 options="clone ship exit"
 num_options=$(set -- $options; printf "%s" "$#")
 
-blankline() { printf "\r\n\r\n"; }
 newline() { printf "\r\n"; }
 newscreen() { printf "\033[H\033[J"; }
 
@@ -37,7 +36,8 @@ do
 	# draw menu
 	newscreen
 	printf "hey! >w<"
-	blankline
+	newline
+	newline
 	index=0
 	for option in $options
 	do
