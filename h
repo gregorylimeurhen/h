@@ -50,6 +50,7 @@ do
 		s) next_option ;;
 		"$enter")
 			cleanup
+			newline
 
 			case "$selected" in
 				0)
