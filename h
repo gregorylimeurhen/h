@@ -47,7 +47,6 @@ do
 		newline
 		index=$((index + 1))
 	done
-	newline
 
 	# read keypress
 	keypress=$(dd bs=1 count=1 2>/dev/null)
