@@ -69,6 +69,7 @@ do
 			case "$selected" in
 				0)
 					brew cleanup --prune=all
+					conda clean --all
 					npm cache clean --force
 					set -- \
 						"$HOME/.android/avd" \

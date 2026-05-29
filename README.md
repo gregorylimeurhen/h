@@ -35,6 +35,7 @@ Use Up, Down, and/or Enter to select option:
 Runs commands:
 ```sh
 brew cleanup --prune=all
+conda clean --all
 npm cache clean --force
 ```
 
