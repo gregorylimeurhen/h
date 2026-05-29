@@ -19,21 +19,64 @@ Run command:
 h
 ```
 
-Use Up or Down to move, and ENTER to select option:
+Use Up, Down, and/or Enter to select option:
 ```
-hello! >w<
+>w<
 
-  [*] clone repo
+  [*] clean disk
+  [ ] clone repo
   [ ] ship repo
   [ ] update h
-  [ ] exit h
+  [ ] quit h
+```
+
+### `clean disk`
+
+Runs commands:
+```sh
+brew cleanup
+npm cache clean
+cargo clean gc
+xcrun simctl delete unavailable
+```
+
+Runs commands:
+```sh
+paths=(
+  "$HOME/Library/Application Support/Code/Cache"
+  "$HOME/Library/Application Support/Code/CachedData"
+  "$HOME/Library/Application Support/Slack/Cache"
+  "$HOME/Library/Caches"
+  "$HOME/Library/Developer/Xcode/Archives"
+  "$HOME/Library/Developer/Xcode/DerivedData"
+  "$HOME/Library/Developer/Xcode/iOS DeviceSupport"
+  "$HOME/Library/Logs"
+)
+du -sh "${paths[@]}" 2>/dev/null | sort -hr
+```
+
+Enter input:
+```sh
+owo
+
+  y/n: 
+```
+
+Input `y` runs command:
+```sh
+rm -rf "${paths[@]}"
+```
+
+Input `n` runs command:
+```sh
+exit
 ```
 
 ### `clone repo`
 
 Enter input:
 ```
->w<
+owo
 
   owner/project: 
 ```
@@ -66,7 +109,7 @@ curl -fsSL "https://raw.githubusercontent.com/gregorylimeurhen/h/refs/heads/main
 install h /usr/local/bin
 ```
 
-### `exit h`
+### `quit h`
 
 Runs command:
 ```sh
