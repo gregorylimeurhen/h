@@ -41,16 +41,16 @@ npm cache clean --force
 Runs commands:
 ```sh
 paths=(
-  "$HOME/.cargo/git"
-  "$HOME/.cargo/registry"
+  "$HOME/.android/avd"
+  "$HOME/.android/cache"
+  "$HOME/.cache"
+  "$HOME/.thumbnails"
   "$HOME/Library/Application Support/Code/Cache"
   "$HOME/Library/Application Support/Code/CachedData"
   "$HOME/Library/Application Support/Slack/Cache"
-  "$HOME/Library/Caches"
   "$HOME/Library/Developer/Xcode/Archives"
   "$HOME/Library/Developer/Xcode/DerivedData"
   "$HOME/Library/Developer/Xcode/iOS DeviceSupport"
-  "$HOME/Library/Logs"
 )
 du -sh "${paths[@]}" 2>/dev/null | sort -hr
 ```
