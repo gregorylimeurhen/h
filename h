@@ -68,11 +68,11 @@ do
 			cleanup
 			case "$selected" in
 				0)
-					brew cleanup
-					npm cache clean
-					cargo clean gc
-					xcrun simctl delete unavailable
+					brew cleanup --prune=all
+					npm cache clean --force
 					set -- \
+						"$HOME/.cargo/git" \
+						"$HOME/.cargo/registry" \
 						"$HOME/Library/Application Support/Code/Cache" \
 						"$HOME/Library/Application Support/Code/CachedData" \
 						"$HOME/Library/Application Support/Slack/Cache" \

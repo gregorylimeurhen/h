@@ -34,15 +34,15 @@ Use Up, Down, and/or Enter to select option:
 
 Runs commands:
 ```sh
-brew cleanup
-npm cache clean
-cargo clean gc
-xcrun simctl delete unavailable
+brew cleanup --prune=all
+npm cache clean --force
 ```
 
 Runs commands:
 ```sh
 paths=(
+  "$HOME/.cargo/git"
+  "$HOME/.cargo/registry"
   "$HOME/Library/Application Support/Code/Cache"
   "$HOME/Library/Application Support/Code/CachedData"
   "$HOME/Library/Application Support/Slack/Cache"
